@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i Frame</title>
+    <style>
+        .ifram {
+            filter: invert(100%);
+        }
+
+        .ic {
+            filter: invert(0%);
+        }
+
+        button {
+            margin: 20px;
+            padding: 20px;
+            background-color: black;
+            border-radius: 100%;
+            color: white;
+            height: 80px;
+            width: 80px;
+            box-shadow: 5px 5px 5px 5px grey;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="myfunction()"><i class="iframe" style="font-size: 36px;"></i></button>
+    <button onclick="my()"><i class="ic" style="font-size: 36px;"></i></button>
+    <br><br><br>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.1378478249235!2d67.03119299016193!3d24.927373514712215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f90157042d3%3A0x93d609e8bec9a880!2sAptech%20Computer%20Education%20North%20Nazimabad%20Center!5e0!3m2!1sen!2s!4v1679065263447!5m2!1sen!2s"
+        width="1200" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" id="dark"></iframe>
+    <script>
+        function myfunction() {
+            document.querySelector('#dark').classList = "ifram"
+        }
+        function my() {
+            document.querySelector('#dark').classList = "ic"
+        }
+    </script>
+</body>
+
+</html>
